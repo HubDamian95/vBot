@@ -137,7 +137,7 @@ if true then
       vocText = "- MS"
   elseif voc() == 4 or voc() == 14 then
       vocText = "- ED"
-
+  end
   macro(5000, function()
     if settings.title then
       if hppercent() > 0 then
