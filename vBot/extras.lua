@@ -127,16 +127,17 @@ addCheckBox("reachable", "Target only pathable mobs", false, leftPanel, "Ignore 
 
 addCheckBox("title", "Custom Window Title", true, rightPanel, "Personalize OTCv8 window name according to character specific.")
 if true then
-  local vocText = ""
-
-  if voc() == 1 or voc() == 11 then
-      vocText = "- EK"
-  elseif voc() == 2 or voc() == 12 then
-      vocText = "- RP"
-  elseif voc() == 3 or voc() == 13 then
-      vocText = "- MS"
-  elseif voc() == 4 or voc() == 14 then
-      vocText = "- ED"
+  local voc
+  if text:lower():find("sorcerer") then
+      voc = "MS"
+  elseif text:lower():find("druid") then
+      voc = "ED"
+  elseif text:lower():find("knight") then
+      voc = "EK"
+  elseif text:lower():find("paladin") then
+      voc = "RP"
+  elseif text:lower():find("monk") then
+      voc = "EM"
   end
 
   macro(5000, function()
