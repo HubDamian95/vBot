@@ -570,15 +570,15 @@ if true then
         end
         local voc
         if text:lower():find("sorcerer") then
-          voc = "MS"
+            voc = "MS"
         elseif text:lower():find("druid") then
-          voc = "ED"
+            voc = "ED"
         elseif text:lower():find("knight") then
-          voc = "EK"
+            voc = "EK"
         elseif text:lower():find("paladin") then
-          voc = "RP"
+            voc = "RP"
         elseif text:lower():find("monk") then
-          voc = "EM"
+            voc = "EM"
         end
         local creature = getCreatureByName(name)
         if creature then
